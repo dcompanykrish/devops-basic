@@ -20,3 +20,4 @@ jobs:
       - name: Fail if there are any errors
         if: ${{ steps.groovy-check.outputs.exitCode != 0 }}
         run: echo "Groovy check failed!"
+        exit: 1
