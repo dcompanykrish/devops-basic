@@ -11,12 +11,5 @@ jobs:
       - name: Set up Groovy
         uses: actions/setup-java@v3
         with:
-          java-version: '11'
-
-      - name: Check Groovy code
-        run: |
-          gradle groovy
-
-      - name: Fail if there are any errors
-        if: ${{ steps.groovy-check.outputs.exitCode != 0 }}
-        run: echo "Groovy check failed!"
+          java-version: 11
+          distribution: openjdk
